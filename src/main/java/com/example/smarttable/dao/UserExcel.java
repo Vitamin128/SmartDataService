@@ -13,4 +13,7 @@ public class UserExcel {
 
     @ExcelProperty("电话")
     private String phone;
+
+    @ExcelProperty("地址")
+    private String address;
 }
