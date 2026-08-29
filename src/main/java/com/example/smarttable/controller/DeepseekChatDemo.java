@@ -27,8 +27,6 @@ public class DeepseekChatDemo {
 
         log.info(file.getName());
 
-        file.getInputStream()
-
         System.out.println(file.getSize());
 
         return "true";
