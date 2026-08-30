@@ -14,6 +14,16 @@ spring:
         options:
           model: deepseek-v4-pro
 
+  cloud:
+    nacos:
+      config:
+        server-addr: 122.51.120.198:8848
+        username: "nacos"
+        password: "OqpnszO8S9RQ"
+
+  config:
+    import:
+      - nacos:smart-table.yaml
 logging:
   pattern:
     console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta}
