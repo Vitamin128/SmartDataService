@@ -2,6 +2,7 @@ package com.example.smarttable.controller;
 
 
 import com.example.smarttable.dao.UserExcel;
+import com.example.smarttable.service.ChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +22,13 @@ import java.io.IOException;
 @Validated
 public class DeepseekChatDemo {
 
-    @PostMapping(value = "/upload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<UserExcel> chat(@RequestParam("file") MultipartFile file) throws IOException {
-        UserExcel UserExcelObject=new UserExcel();
+    @Autowired
+    private ChatService chatService;
+//    private ChatClient chatClient;
 
-        UserExcelObject.setAddress("SHANGHAI");
-        UserExcelObject.setPhone("12312345344");
-        UserExcelObject.setName("LISI");
-        UserExcelObject.setAge(10);
-        return ResponseEntity.ok(UserExcelObject);
+    @PostMapping(value = "/upload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String chat(@RequestParam("file") MultipartFile file) throws IOException {
+        chatService.readAsExcel(file);
+        return "成功";
     }
 }

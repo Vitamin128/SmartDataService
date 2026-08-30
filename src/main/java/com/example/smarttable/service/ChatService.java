@@ -24,7 +24,12 @@ public class ChatService {
             {
                 int sheetNo=readSheet.getSheetNo();
                 String sheetName=readSheet.getSheetName();
-
+                String readSheetCopy=readSheet.toString();
+                int Number=readSheet.getHeadRowNumber();
+                System.out.println(sheetNo);
+                System.out.println(sheetName);
+                System.out.println(readSheetCopy);
+                System.out.println(Number);
             }
         }
         return " ";
