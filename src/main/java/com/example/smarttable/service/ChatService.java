@@ -20,6 +20,7 @@ public class ChatService {
         StringBuilder stringBuilder=new StringBuilder("原始的Excel数据\n");
         byte[] fileBytes=file.getBytes();
         List<UserExcel>rows=EasyExcel.read(new ByteArrayInputStream(fileBytes),UserExcel.class,null).sheet(0).doReadSync();
+
         for(UserExcel row:rows)
         {
             System.out.println(row.getName());
