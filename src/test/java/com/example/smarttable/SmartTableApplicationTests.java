@@ -4,7 +4,6 @@ import com.alibaba.excel.EasyExcel;
 import com.example.smarttable.dao.UserExcel;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
