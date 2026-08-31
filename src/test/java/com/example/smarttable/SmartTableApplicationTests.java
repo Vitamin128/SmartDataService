@@ -2,7 +2,9 @@ package com.example.smarttable;
 
 import com.alibaba.excel.EasyExcel;
 import com.example.smarttable.dao.UserExcel;
+import com.example.smarttable.service.ToolClass;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.poi.ss.formula.functions.T;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -25,16 +27,14 @@ class SmartTableApplicationTests {
     @Test
     void ExcelOperation()
     {
-        List<UserExcel> list=new ArrayList<>();
-        UserExcel user=new UserExcel();
-        user.setName("LISI1");
-        user.setAge(10);
-        user.setPhone("12541854168");
-        user.setAddress("SHANGHAI");
-        list.add(user);
-
-        EasyExcel.write("D://Documents/Smart.xlsx",UserExcel.class)
-                .sheet("Sheet1").doWrite(list);
+        Integer number=10;
+        ToolClass<Integer> object=new ToolClass<Integer>(number);
+        List<ToolClass<Integer>> list1=new ArrayList<>();
+        list1.add(object);
+        for(ToolClass<Integer> object1 : list1)
+        {
+            System.out.println(object1.getVariable());
+        }
 
     }
 
