@@ -1,11 +1,9 @@
 package com.example.smarttable;
 
+import com.example.smarttable.File.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 @SpringBootTest
@@ -23,14 +21,11 @@ class SmartTableApplicationTests {
     @Test
     void ExcelOperation()
     {
-        Integer number=10;
-        ToolClass<Integer> object=new ToolClass<Integer>(number);
-        List<ToolClass<Integer>> list1=new ArrayList<>();
-        list1.add(object);
-        for(ToolClass<Integer> object1 : list1)
-        {
-            System.out.println(object1.getVariable());
-        }
+//        Student student_person=new Student("CHUHAO","GAN","2729583308@QQ.COM");
+//        log.info("student_person:{}",student_person.say());
+//        log.info("student_person:{}",student_person.walk());
+//        log.info("student_person:{}",student_person.whoami());
+        var name="dasdas";
 
     }
 
