@@ -1,10 +1,6 @@
 package com.example.smarttable;
 
-import com.alibaba.excel.EasyExcel;
-import com.example.smarttable.dao.UserExcel;
-import com.example.smarttable.service.ToolClass;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.poi.ss.formula.functions.T;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
