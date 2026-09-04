@@ -24,6 +24,10 @@ spring:
   config:
     import:
       - nacos:smart-table.yaml
+
+server:
+  port: 8081
+
 logging:
   pattern:
     console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta}
