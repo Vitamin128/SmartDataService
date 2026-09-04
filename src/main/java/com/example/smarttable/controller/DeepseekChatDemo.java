@@ -25,13 +25,13 @@ import java.io.IOException;
 @Validated
 public class DeepseekChatDemo {
 
-    @Autowired
-    private ChatService chatService;
+//    @Autowired
+//    private ChatService chatService;
 //    private ChatClient chatClient;
 
     @PostMapping(value = "/upload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String chat(@RequestParam("file") MultipartFile file) throws IOException {
-        chatService.readAsExcel(file);
+//        chatService.readAsExcel(file);
         return "成功";
     }
 
